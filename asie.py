@@ -2,13 +2,12 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 NUM_JOBS = 15
 NUM_VMS = 5
 POPULATION_SIZE = 70
 GENERATIONS = 100
 MUTATION_RATE = 0.2
-MAX_VM_LOAD = 50    # Maximum load per VM
+MAX_VM_LOAD = 50    
 
 
 def generate_job_times(num_jobs):
@@ -19,7 +18,7 @@ def generate_vm_speeds(num_vms):
 
 job_times = generate_job_times(NUM_JOBS)
 vm_speeds = generate_vm_speeds(NUM_VMS)
-job_priorities = [random.randint(1, 5) for _ in range(NUM_JOBS)]  # 1 (low) to 5 (high)
+job_priorities = [random.randint(1, 5) for _ in range(NUM_JOBS)]  
 
 
 def calculate_vm_loads(chromosome):
